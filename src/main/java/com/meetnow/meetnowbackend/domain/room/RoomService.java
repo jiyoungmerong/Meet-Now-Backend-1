@@ -11,4 +11,24 @@ public class RoomService {
 
     private final RoomRepository roomRepository;
 
+    @Transactional
+    public Room save(Room room) {
+        return roomRepository.save(room);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
