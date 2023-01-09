@@ -1,6 +1,7 @@
 package com.meetnow.meetnowbackend.domain.user;
 
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -18,7 +19,10 @@ public class User {
     @Column(name = "username", nullable = false, unique = true, length = 30)
     private String username;
 
-
+    @Builder
+    public User(String username) {
+        this.username = username;
+    }
 }
 
 
